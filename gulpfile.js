@@ -1,6 +1,7 @@
 var
 gulp = require('gulp'),
 coffee = require('gulp-coffee'),
+ngAnnotate = require('gulp-ng-annotate'),
 concat = require('gulp-concat'),
 sass = require('gulp-sass'),
 gutil = require('gulp-util'),
@@ -26,6 +27,7 @@ gulp.task('coffee', function () {
   return gulp.src('src/**/*.coffee')
     .pipe(coffee())
     .on('error', onError)
+    .pipe(ngAnnotate())
     .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(gulp.dest(build));
@@ -55,11 +57,17 @@ gulp.task('index', function () {
     .pipe(gulp.dest(build));
 });
 
+gulp.task('cname', function () {
+  return gulp.src('CNAME')
+    .pipe(gulp.dest(build));
+});
+
 gulp.task('build', [
   'index',
   'coffee',
   'libraries',
-  'sass'
+  'sass',
+  'cname'
 ]);
 
 gulp.task('default', ['build'], function () {
