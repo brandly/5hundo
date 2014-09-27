@@ -1,1 +1,1 @@
-(function(){var o;o=angular.module("5hundo",["youtube-embed"]),o.controller("VideoCtrl",function(o){o.videoID="YKvCHDikwX8",o.vars={autoplay:!0}})}).call(this);
+(function(){var o;o=angular.module("5hundo",["youtube-embed"]),o.controller("VideoCtrl",["$scope",function(o){o.videoID="YKvCHDikwX8",o.vars={autoplay:!0}}])}).call(this);
