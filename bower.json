@@ -1,0 +1,11 @@
+{
+  "name": "5hundo",
+  "version": "0.1.2",
+  "description": "idk",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.2.22",
+    "angular-youtube-mb": "~0.1.2"
+  }
+}
