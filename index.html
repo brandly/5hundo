@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="5hundo">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>5hundo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+  </head>
+  <body ng-controller="VideoCtrl">
+    <youtube-video
+      video-id="videoID"
+      player-vars="vars"
+      player-width="'100%'"
+      player-height="'100%'"></youtube-video>
+    <script src="lib.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
