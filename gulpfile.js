@@ -45,6 +45,7 @@ gulp.task('sass', function () {
   return gulp.src('src/styles/style.scss')
     .pipe(sass())
     .on('error', onError)
+    .pipe(minify())
     .pipe(concat('style.css'))
     .pipe(gulp.dest(build));
 });
