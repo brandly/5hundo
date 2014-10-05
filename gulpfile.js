@@ -57,6 +57,11 @@ gulp.task('index', function () {
     .pipe(gulp.dest(build));
 });
 
+gulp.task('images', function () {
+  return gulp.src('src/images/*')
+    .pipe(gulp.dest(build));
+});
+
 gulp.task('cname', function () {
   return gulp.src('CNAME')
     .pipe(gulp.dest(build));
@@ -67,6 +72,7 @@ gulp.task('build', [
   'coffee',
   'libraries',
   'sass',
+  'images',
   'cname'
 ]);
 
